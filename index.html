@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <h1>Mickey's Weather App</h1>
+      <div>
+        <input type="checkbox" class="checkbox" id="checkbox" />
+        <label for="checkbox" class="label">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <div class="ball"></div>
+        </label>
+      </div>
+    </div>
+    <div class="container">
+      <header>
+        <form class="form">
+          <label for="city">Enter a location for weather information</label>
+          <input type="text" id="search" name="city" />
+        </form>
+      </header>
+
+      <section class="card d-none">
+        <img class="time" src="https://via.placeholder.com/400x300" />
+        <div class="icon">
+          <img src="" alt="" />
+        </div>
+        <div class="details">
+          <h2>CITY NAME</h2>
+          <p id="weather-condition">Weather condition <span>&deg;C</span></p>
+          <h2>TEMP</h2>
+        </div>
+      </section>
+    </div>
+
+    <script src="./forecast.js" async defer></script>
+    <script src="./app.js" async defer></script>
+  </body>
+</html>

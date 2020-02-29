@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --dark: #292c35;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 20px;
+  background: #eee;
+  font-family: 'Lato', sans-serif;
+  transition: transform 0.8s linear;
+}
+
+body.dark {
+  background: var(--dark);
+}
+
+/* dark mode toggle */
+.label {
+  width: 50px;
+  height: 26px;
+  background-color: #111;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  position: relative;
+  /* right: 20px; */
+}
+
+.ball {
+  background-color: #fff;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav.dark {
+  color: white;
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+/* dark mode toggle */
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px;
+  height: 100vh;
+  margin: 0 auto;
+  color: grey;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+}
+
+header #search {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 0.25rem;
+  border: none;
+}
+
+#search {
+  width: 100%;
+}
+
+.card {
+  background: var(--dark);
+
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  -webkit-box-shadow: 0px -2px 8px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px -2px 8px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px -2px 8px -2px rgba(0, 0, 0, 0.75);
+}
+
+.card.dark {
+  background-color: white;
+}
+
+.icon {
+  width: 100%;
+  position: relative;
+  top: -50px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon img {
+  border-radius: 50%;
+  background: #eee;
+}
+
+.details {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+}
+
+.details.dark {
+  color: grey;
+}
+
+.details #weather-condition {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.time {
+  width: 100%;
+}
+
+.d-none {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav {
+    padding-bottom: 50px;
+  }
+  .nav h1 {
+    font-size: 1rem;
+  }
+}
